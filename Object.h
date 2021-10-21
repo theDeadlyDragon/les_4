@@ -4,6 +4,7 @@
 #pragma once
 
 #include "Vec3D.h"
+#include "Ray.h"
 
 #ifndef LES_4_OBJECT_H
 #define LES_4_OBJECT_H
@@ -14,9 +15,13 @@ private:
     float x,y,z;
     Vec3D center;
 
-    Object(float x, float y, float z):center(x,y,z){
+protected:
 
-    }
+
+public:
+    Object(float x, float y, float z):center(x,y,z){}
+    bool hit(Ray &ray);
+
 };
 
 

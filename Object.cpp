@@ -3,3 +3,6 @@
 //
 
 #include "Object.h"
+bool Object::hit(Ray &ray) {
+    return true;
+}
