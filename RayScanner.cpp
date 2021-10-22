@@ -7,7 +7,7 @@
 void RayScanner::scan() {
     int camWidth = cam.getCamWidth();
     int camHeight = cam.getCamHeight();
-
+    Vec3D supportV = cam.getSupportV();
 
     for(int z = 0; z < camHeight; z++){
         for (int x = 0; x < camWidth; ++x) {

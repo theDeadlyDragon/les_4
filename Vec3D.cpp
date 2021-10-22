@@ -3,6 +3,7 @@
 //
 
 #include "Vec3D.h"
+#include <math.h>
 
 Vec3D Vec3D::operator+(Vec3D const &other){
     return Vec3D(x + other.x, y + other.y , z + other.z);

@@ -4,6 +4,7 @@
 #pragma once
 #include "Object.h"
 #include "camera.h"
+#include "Vec3D.h"
 
 #ifndef LES_4_RAYSCANNER_H
 #define LES_4_RAYSCANNER_H

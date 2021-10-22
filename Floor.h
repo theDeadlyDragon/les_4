@@ -5,6 +5,7 @@
 #include "Object.h"
 #include <vector>
 #include <iostream>
+#include <math.h>
 #ifndef LES_4_FLOOR_H
 #define LES_4_FLOOR_H
 

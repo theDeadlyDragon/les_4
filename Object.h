@@ -9,6 +9,7 @@
 #ifndef LES_4_OBJECT_H
 #define LES_4_OBJECT_H
 
+class Ray;
 
 class Object {
 private:

@@ -2,6 +2,7 @@
 // Created by maurice Bal on 15/10/2021.
 //
 
+#include <cmath>
 #include "Floor.h"
 
 
@@ -64,8 +65,8 @@ bool Floor::hit(Ray &ray) {
         return false;
     tempVec2.mul(a);
     tempVec1 = tempVec1 + tempVec2;
-    int x = std::round(tempVec1.x);
-    int z = std::round(tempVec1.z);
+    int x = round(tempVec1.x);
+    int z = round(tempVec1.z);
 
 
 
