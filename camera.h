@@ -3,20 +3,22 @@
 //
 #pragma once
 #include "Vec3D.h"
+#include <vector>
+#include <iostream>
 #ifndef LES_4_CAMERA_H
 #define LES_4_CAMERA_H
 
 
 class Camera {
+    //friend RayScanner;
+
 protected:
-    Vec3D camCor = Vec3D(0,0,0);;
-    Vec3D camViewDir = Vec3D(0,0,0);;
+    Vec3D camCor = Vec3D(0,0,0);
+    Vec3D camViewDir = Vec3D(0,0,0);
+    float si;
+    std::vector<std::vector<int>> camVector;;
 
 
-    Camera(float centerX, float centerY, float centerZ, Vec3D viewDir){
-      camCor = Vec3D(centerX,centerY,centerZ);
-      camViewDir = viewDir;
-    };
 public:
     Vec3D& getCamCor(){
         return camCor;
@@ -24,7 +26,12 @@ public:
     Vec3D& getCamViewDir(){
         return camViewDir;
     }
+    int& getCamWidth();
+    int& getCamHeight();
+    Vec3D getSupportV();
 
+
+    Camera(float centerX, float centerY, float centerZ, Vec3D viewDir);
 };
 
 

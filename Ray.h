@@ -31,11 +31,6 @@ protected:
     float xStart,yStart,zStart;
 
 
-    Ray(float xSup, float ySup, float zSup, float xDir, float yDir, float zDir):
-            xSup(xSup),ySup(ySup),zSup(zSup), xDir(xDir),yDir(yDir),zDir(zDir) {
-        vectorS = Vec3D(xSup,ySup,zSup);
-        vectorD = Vec3D(xDir,yDir,zDir);
-    }
     Ray(float xStart, float yStart, VPO object):
         xStart(xStart), yStart(yStart), object(object){
 
@@ -70,6 +65,11 @@ public:
     }
     bool scan();
 
+    Ray(float xSup, float ySup, float zSup, float xDir, float yDir, float zDir):
+            xSup(xSup),ySup(ySup),zSup(zSup), xDir(xDir),yDir(yDir),zDir(zDir) {
+        vectorS = Vec3D(xSup,ySup,zSup);
+        vectorD = Vec3D(xDir,yDir,zDir);
+    }
 };
 
 

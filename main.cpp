@@ -4,9 +4,12 @@
 
 int main() {
     std::cout << "Hello, World!" << std::endl;
-    auto f = Sphere(0,0,0,5);
+    auto f = Floor(0,0,0);
 
-    return 0;
+    auto a = Camera(10,2,-100,Vec3D(0,0,0));
+
+    a.getSupportV().show(" ");
+    std::cout << a.getCamHeight();
 
 
 }

@@ -12,14 +12,21 @@
 class Floor: public Object{
 
 protected:
+
     std::vector<std::vector<char>> floorVector;
-    float width;
-    float lenght;
+    int width;
+    int lenght;
+    int bWidth;
+    std::vector<int> origin;
 
 public:
-    Floor(float x, float y, float z, float width = 100, float lenght = 100, float bWidth = 10) :
-    Object(x, y, z), width(width), lenght(lenght) {
+    Floor(float x, float y, float z, int width = 51, int lenght = 51, int bWidth = 3) :
+    Object(x, y, z), width(width), lenght(lenght), bWidth(bWidth) {
+        origin = {(width/2),(lenght/2)};
+        floorVector.resize(lenght,std::vector<char>(width, ' '));
+
         createFloor();
+
     }
 
     void createFloor();

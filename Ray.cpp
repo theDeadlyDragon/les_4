@@ -8,10 +8,10 @@
 bool Ray::scan() {
 
     for(auto ob = 0; ob < object.size(); ob++){
-        object[ob]->hit(*this);
+        bool a = object[ob]->hit(*this);
 
-        return true;
-
+        if(a == true)
+            return true;
     }
     return false;
 
